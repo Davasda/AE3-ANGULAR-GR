@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Usuario } from '../entidades/usuario';
 
 @Component({
   selector: 'app-cabecera',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cabecera.component.css']
 })
 export class CABECERAComponent implements OnInit {
+loginUserName:String;
 
-  constructor() { }
+
+
+constructor(route : ActivatedRoute) {
+  this.loginUserName = route.snapshot.params["loginUserName"];
+  console.log("login cabecera dento route: " + this.loginUserName);
+ }
 
   ngOnInit(): void {
   }
+
 
 }

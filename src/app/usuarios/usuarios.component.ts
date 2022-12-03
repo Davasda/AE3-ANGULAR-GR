@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Usuario } from '../entidades/usuario';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -10,17 +12,20 @@ export class UsuariosComponent implements OnInit {
 
   userDado : string = "";
   passDado : string ="";
-  statusLogin = false;
+  loginStatus: boolean;  
   mensaje :string ="";
+  loginUserName:string="";
 
   //Creamos el array listaUsuarios
   listaUsuarios:Usuario[] = []
+  usuario : Usuario
 
   constructor() { 
     let user:Usuario = new Usuario("user","123");
     this.listaUsuarios.push(user);
-    user = new Usuario("david","456");
+    let user2 = new Usuario("david","456");
     this.listaUsuarios.push(user);
+
   }
 
   public checkLogin( userDado : string , passDado: string){
@@ -28,14 +33,14 @@ export class UsuariosComponent implements OnInit {
     console.log(this.listaUsuarios)
     console.log (userDado)
     console.log (passDado)
-    for (let user of this.listaUsuarios ){
+    for (let usuarios of this.listaUsuarios ){
       console.log(this.listaUsuarios)
-      if ((userDado.match(user.username)) && (passDado.match(user.password))){
-        this.statusLogin = true;
-        this.mensaje="USUARIO LOGUEADO"
+      if ((userDado.match(usuarios.username)) && (passDado.match(usuarios.password))){       
+        this.mensaje="USUARIO LOGUEADO. AHORA PUEDES VER EL LISTADO DE VIDEOJUEGOS";
+        console.log ("logueado como: " + this.loginUserName);     
       }
       else
-        this.mensaje="ERROR DE LOGIN"
+        this.mensaje="ERROR DE LOGIN";
 
     }
   }
@@ -48,4 +53,5 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }

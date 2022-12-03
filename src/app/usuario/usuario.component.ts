@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Usuario } from '../entidades/usuario';
 import { UsuariosComponent } from '../usuarios/usuarios.component';
 
@@ -11,12 +12,15 @@ import { UsuariosComponent } from '../usuarios/usuarios.component';
 export class UsuarioComponent implements OnInit {
 
 
-  statusLogin = false
+  statusLogin:boolean;
 
-
-  constructor() { 
-
-  }
+  loginUserName:string ="";
+  
+  constructor(route : ActivatedRoute) {
+    console.log("añadiendo usuario")
+    this.statusLogin=true;
+    this.loginUserName = route.snapshot.params["loginUserName"]
+   }
 
 
   

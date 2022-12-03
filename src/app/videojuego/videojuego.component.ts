@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Usuario } from '../entidades/usuario';
 import { Videojuego } from '../entidades/videojuego';
 
 @Component({
@@ -9,11 +10,17 @@ import { Videojuego } from '../entidades/videojuego';
 })
 export class VideojuegoComponent implements OnInit {
 
+  @Input() usuario : Usuario;
+  
+  
+
   idVideojuego: number = 0;
   titulo : string ="";
   compania : string="";
   valoracion : number=0;
   imageUrl: string= "";
+  loginStatus:boolean;
+ 
 
   constructor(route : ActivatedRoute) {
     console.log("Creando el videojuego")
@@ -29,6 +36,8 @@ export class VideojuegoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() videojuego : Videojuego;
+  
+
+  
 
 }
