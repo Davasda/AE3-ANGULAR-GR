@@ -1,0 +1,10 @@
+<body>
+    <div>
+        <span>Username: </span>
+        <input [(ngModel)]="userDado">
+        <span>Password: </span>
+        <input [(ngModel)]="passDado">
+        <button (click)="checkLogin(userDado,passDado)">Validar</button>
+        <P>{{mensaje}}</P>
+      </div>
+</body>

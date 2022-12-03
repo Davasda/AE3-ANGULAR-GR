@@ -1,0 +1,102 @@
+/* TITLE */
+
+
+.description {
+    margin: 4% 5%;
+    text-align: center;
+}
+
+.description p {
+    margin: 1.5% 10%;
+}
+
+
+/* CONTACT FORM */
+
+
+.form-contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.contact label {
+    margin: 4% 0;
+    color: #A4A491;
+    font-family: roboto-slab, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16pt;
+}
+
+.contact input:not([type="submit"]), textarea {
+    color: #F1F5D7;
+    font-family: roboto-slab, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+    padding-left: 1%;
+}
+
+.contact input:not([type="submit"]), textarea {
+    border: none;
+    border-bottom: 2px #41d846 solid;
+    background-color: #1D1D25;
+    outline: none;
+}
+
+.button {
+    background-color: #A4A491;
+    color: #1D1D25;
+    font-family: roboto-slab, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16pt;
+    margin: 5% 0;
+    padding: 2% 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width:1024px) {
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+}
+
+@media (max-width:768px) {
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+}
+
+@media (max-width:425px) {
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+}
+
+
+/* RESPONSE */
+
+#response {
+    text-align: center;
+}

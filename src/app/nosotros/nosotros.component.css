@@ -1,0 +1,65 @@
+
+
+
+/* MAIN */
+
+h5{
+    color: #41d846;
+}
+
+.equipo {    
+    margin: 2% 5%;
+}
+
+.equipo h1 {
+    text-align: center;
+    margin: 10%;
+}
+
+.personas {
+    background-color: rgb(49, 47, 47);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.persona {
+    margin: 5%;
+}
+
+.persona p {
+    text-align: justify;
+}
+
+.foto {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.nombre {
+    margin: 2% 0;
+}
+
+.texto {
+    margin: 2% 0;
+}
+
+
+@media (max-width:768px) {
+
+    .personas {
+        grid-template-columns: 1fr;
+    }
+
+    .persona h5 {
+        text-align: center;
+    }
+
+}
+
+@media (max-width:425px) {
+
+ 
+
+}
+

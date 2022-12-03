@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AE3-ANGULAR-GRUPO';
+  title = 'AE3-DAVID';
 }
