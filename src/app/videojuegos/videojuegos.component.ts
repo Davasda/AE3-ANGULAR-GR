@@ -43,6 +43,7 @@ _idVideojuego: number = 0;
     this.listaVideojuegos.push(videojuego)
 }
 
+/*Método para que al selecionar uno de la lista vaya al detalle*/
 public seleccionar(videojuego : Videojuego) : void{
   console.log("Seleccionando...")
   this._idVideojuego = videojuego.idVideojuego

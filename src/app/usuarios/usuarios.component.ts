@@ -27,16 +27,17 @@ export class UsuariosComponent implements OnInit {
     this.listaUsuarios.push(user);
 
   }
-
+/*metodo para chequear si hay un usuario y un password en la lista creada*/
   public checkLogin( userDado : string , passDado: string){
     console.log("checking....")
     console.log(this.listaUsuarios)
     console.log (userDado)
     console.log (passDado)
+    /*Recorre la lista de usuarios para comprobar*/
     for (let usuarios of this.listaUsuarios ){
       console.log(this.listaUsuarios)
       if ((userDado.match(usuarios.username)) && (passDado.match(usuarios.password))){       
-        this.mensaje="USUARIO LOGUEADO. AHORA PUEDES VER EL LISTADO DE VIDEOJUEGOS";
+        this.mensaje="USUARIO LOGUEADO. AHORA PUEDES VER EL LISTADO DE VIDEOJUEGOS";/*Muestra mensaje en pantalla*/
         console.log ("logueado como: " + this.loginUserName);     
       }
       else
